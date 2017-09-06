@@ -1,9 +1,12 @@
 require 'httparty'
 require 'json'
+require_relative 'roadmap'
+
 
 class Kele
-  attr_accessor :user_data, :auth_token 
+  attr_accessor :user_data, :auth_token
 
+  include Roadmap
   include HTTParty
 
   def initialize(email, password)
