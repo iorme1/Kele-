@@ -11,7 +11,7 @@ class Kele
     }
 
     response = self.class.post("https://www.bloc.io/api/v1/sessions", body: credentials)
-    @auth_token = response[:auth_token]
+    @auth_token = response["auth_token"]
   end
 
  end
